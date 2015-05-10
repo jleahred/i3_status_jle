@@ -19,6 +19,7 @@ func TestParseFileCheckProperties(t *testing.T) {
 		"MemFree":      2838076,
 		"MemAvailable": 6397776,
 		"SwapTotal":    5859324,
+		"Cached":       363124,
 	}
 
 	for name, val := range mapCheck {

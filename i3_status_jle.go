@@ -30,7 +30,7 @@ func _ParseMemInfoLine(memInfoLine string) (string, int64) {
 	memName := strings.Trim(memInfoLine[0:17], " ")
 	memName = memName[0 : len(memName)-1]
 	memInt, _ := strconv.ParseInt(
-		memInfoLine[17:len(memInfoLine)-3], 10, 0)
+		strings.Trim(memInfoLine[17:len(memInfoLine)-3], " "), 10, 0)
 	return memName, memInt
 }
 
